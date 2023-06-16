@@ -1,0 +1,35 @@
+For each of the systems (NIK, PIM, PAK, CHK1_5_ligands and CHK1_13_ligands), we provide the input topology and conformation
+used to perform the RE-EDS calculation with both force fields (gaff and openff) in either solvent or complexed with the kinase.
+
+Anyone wanting to reproduce those results could copy one of the directories (e.g. ./CHK1_5_ligands/openff_input/ naming the directory 0_input)
+Then the person would have to copy all python scripts found here, and adapt the global_definitions.py script to point to the correct .top, .ptp, .cnf
+(and disres.dat in case there are distance restraints)
+
+example:
+
+        project_dir/
+                   0_input/xxx.top
+                           xxx.cnf
+                           xxx.ptp
+                           (xxx_disres.dat)
+                   global_definitions.py
+                   0_initialize_imd.py
+                   0_job_emin.py
+                   a_job_opt_states.py
+                   etc.
+
+The .imd files that we provide are those used in our work which used different versions of gromos (and re-eds python code), where the expected format changed.
+There are thus not expected to work out of the box. We provide an up to date example file "template_md.imd" which can be used for any system in the parent directory.
+
+The file would simply have to be modified in the FORCE, MULTIBATH and SYSTEM blocks, which can be done automatically with the script: 0_inititialize_imd.py
+(note the script uses a template .imd a file from the re-eds repo, so it is always worthwhile comparing it with the file we provide and recommended gromos options)
+
+The each script of the RE-EDS pipeline can be run in order where the input of one script will take output from the previous one
+        0_initialize_imd.py
+        0_job_emin.py  (typically only used for complexed simulations)
+        a_job_opt_states.py
+        b_job_lower_bound.py
+        c_job_eoff_estm.py
+        d_job_mixed_opt.py
+        e_job_production.py
+
