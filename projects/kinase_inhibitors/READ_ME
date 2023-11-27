@@ -18,7 +18,7 @@ example:
                    a_job_opt_states.py
                    etc.
 
-The .imd files that we provide are those used in our work which used different versions of gromos (and re-eds python code), where the expected format changed.
+The .imd files that we provide are those used in our work which used different versions of gromos (and re-eds python code), where the expected format may have changed.
 There are thus not expected to work out of the box. We provide an up to date example file "template_md.imd" which can be used for any system in the parent directory.
 
 The file would simply have to be modified in the FORCE, MULTIBATH and SYSTEM blocks, which can be done automatically with the script: 0_inititialize_imd.py
