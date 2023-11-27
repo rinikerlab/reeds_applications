@@ -1,0 +1,127 @@
+TITLE
+NIK_gaff
+
+	 >>> Generated with python lib function_libs utilities. (riniker group)
+	 >>> line_seperator: '\n'	 field_seperator: '\t'
+END
+AMBER
+# 	 AMBER 	 AMBSCAL
+ 	 1 	 1.2 	 
+END
+BOUNDCOND
+# 	 NTB 	 NDFMIN
+ 	 1 	 6 	 
+END
+COMTRANSROT
+# 	 NSCM
+ 	 -1000 	 
+END
+CONSTRAINT
+# 	 NTC
+ 	 3 	 
+# 	 NTCP 	 NTCP0(1)
+ 	 1 	 0.0001 	 
+# 	 NTCS 	 NTCS0(1)
+ 	 1 	 0.0001 	 
+END
+COVALENTFORM
+# 	 NTBBH 	 NTBAH 	 NTBDN
+ 	 1 	 1 	 0 	 
+END
+DISTANCERES
+# 	 NTDIR 	 NTDIRA 	 CDIR 	 DIR0 	 TAUDIR 	 FORCESCALE 	 VDIR 	 NTWDIR
+ 	 1 	 0 	 5000 	 1 	 1 	 0 	 0 	 0 	 
+END
+FORCE
+# 	 BONDS 	 ANGLES 	 IMPROPER 	 DIHEDRAL 	 ELECTROSTATIC 	 VDW
+ 	 0 	 1 	 1 	 1 	 1 	 1 	 
+# 	 NEGR 	 NRE
+ 	 7 	 41 	 86 	 131 	 177 	 218 	 260 	 4694 	 
+END
+INITIALISE
+# 	 NTIVEL 	 NTISHK 	 NTINHT 	 NTINHB
+ 	 1 	 3 	 0 	 0 	 
+# 	 NTISHI 	 NTIRTC 	 NTICOM
+ 	 1 	 0 	 0 	 
+# 	 NTISTI
+ 	 0 	 
+# 	 IG 	 TEMPI
+ 	 214053 	 298 	 
+END
+MULTIBATH
+# ALGORITHM
+  0
+# NBATHS
+  2
+# TEMP0(1 ... NBATHS)	TAU(1 ... NBATHS)
+  298	0.1
+  298	0.1
+# DOFSET
+  2
+# LAST(1 ... DOFSET)	COMBATH(1 ... DOFSET)	IRBATH(1 ... DOFSET)
+  260		1	1
+  4694		2	2
+END
+NONBONDED
+# 	 NLRELE
+ 	 1 	 
+# 	 APPAK 	 RCRF 	 EPSRF 	 NSLFEXCL
+ 	 0 	 1.0 	 66.7 	 1 	 
+# 	 NSHAPE 	 ASHAPE 	 NA2CLC 	 TOLA2 	 EPSLS
+ 	 3 	 1.0 	 2 	 1e-10 	 0 	 
+# 	 NKX 	 NKY 	 NKZ 	 KCUT
+ 	 10 	 10 	 10 	 100 	 
+# 	 NGX 	 NGY 	 NGZ 	 NASORD 	 NFDORD 	 NALIAS 	 NSPORD
+ 	 32 	 32 	 32 	 3 	 2 	 3 	 4 	 
+# 	 NQEVAL 	 FACCUR 	 NRDGRD 	 NWRGRD
+ 	 100000 	 1.6 	 0 	 0 	 
+# 	 NLRLJ 	 SLVDNS
+ 	 0 	 33.3 	 
+END
+PAIRLIST
+# 	 ALGORITHM 	 NSNB 	 RCUTP 	 RCUTL 	 SIZE 	 TYPE
+ 	 2 	 1 	 1.0 	 1.0 	 0.5 	 1 	 
+END
+PRESSURESCALE
+# 	 COUPLE 	 SCALE 	 COMP 	 TAUP 	 VIRIAL
+ 	 2 	 1 	 0.0004575 	 0.5 	 2 	 
+# 	 SEMIANISOTROPIC COUPLINGS(X, Y, Z)
+ 	 1 	 1 	 1 	 
+# 	 PRES0(1...3,1...3)
+ 	 0.06102 	 0 	 0
+ 	 0 	 0.06102 	 0
+ 	 0 	 0 	 0.06102 	 
+END
+PRINTOUT
+# 	 NTPR 	 NTPP
+ 	 1000 	 0 	 
+END
+REPLICA_EDS
+# 	 REEDS
+ 	 1 	 
+# 	 NRES 	 NUMSTATES 	 NEOFF
+ 	 32 	 6 	 32 	 
+# 	 RES(1 ... NRES)
+ 	 1.0 	 0.21704 	 0.04961 	 0.0479 	 0.04684 	 0.04595 	 0.04521 	 0.04452 	 0.04382 	 0.04324 	 0.04275 	 0.04229 	 0.04185 	 0.04137 	 0.04082 	 0.04029 	 0.03973 	 0.03913 	 0.0385 	 0.03777 	 0.03668 	 0.03544 	 0.034 	 0.03254 	 0.03096 	 0.02908 	 0.027 	 0.02493 	 0.02274 	 0.01997 	 0.01472 	 0.00228 	 
+# 	 EIR(NUMSTATES x NRES)
+ 	 0.0 	 0.0 	 0.0 	 0.0 	 0.0 	 0.0 	 0.0 	 0.0 	 0.0 	 0.0 	 0.0 	 0.0 	 0.0 	 0.0 	 0.0 	 0.0 	 0.0 	 0.0 	 0.0 	 0.0 	 0.0 	 0.0 	 0.0 	 0.0 	 0.0 	 0.0 	 0.0 	 0.0 	 0.0 	 0.0 	 0.0 	 0.0
+ 	 134.14 	 134.14 	 134.14 	 134.14 	 134.14 	 134.14 	 134.14 	 134.14 	 134.14 	 134.14 	 134.14 	 134.14 	 134.14 	 134.14 	 134.14 	 134.14 	 134.14 	 134.14 	 134.14 	 134.14 	 134.14 	 134.14 	 134.14 	 134.14 	 134.14 	 134.14 	 134.14 	 134.14 	 134.14 	 134.14 	 134.14 	 134.14
+ 	 -136.0 	 -136.0 	 -136.0 	 -136.0 	 -136.0 	 -136.0 	 -136.0 	 -136.0 	 -136.0 	 -136.0 	 -136.0 	 -136.0 	 -136.0 	 -136.0 	 -136.0 	 -136.0 	 -136.0 	 -136.0 	 -136.0 	 -136.0 	 -136.0 	 -136.0 	 -136.0 	 -136.0 	 -136.0 	 -136.0 	 -136.0 	 -136.0 	 -136.0 	 -136.0 	 -136.0 	 -136.0
+ 	 225.51 	 225.51 	 225.51 	 225.51 	 225.51 	 225.51 	 225.51 	 225.51 	 225.51 	 225.51 	 225.51 	 225.51 	 225.51 	 225.51 	 225.51 	 225.51 	 225.51 	 225.51 	 225.51 	 225.51 	 225.51 	 225.51 	 225.51 	 225.51 	 225.51 	 225.51 	 225.51 	 225.51 	 225.51 	 225.51 	 225.51 	 225.51
+ 	 153.59 	 153.59 	 153.59 	 153.59 	 153.59 	 153.59 	 153.59 	 153.59 	 153.59 	 153.59 	 153.59 	 153.59 	 153.59 	 153.59 	 153.59 	 153.59 	 153.59 	 153.59 	 153.59 	 153.59 	 153.59 	 153.59 	 153.59 	 153.59 	 153.59 	 153.59 	 153.59 	 153.59 	 153.59 	 153.59 	 153.59 	 153.59
+ 	 -108.02 	 -108.02 	 -108.02 	 -108.02 	 -108.02 	 -108.02 	 -108.02 	 -108.02 	 -108.02 	 -108.02 	 -108.02 	 -108.02 	 -108.02 	 -108.02 	 -108.02 	 -108.02 	 -108.02 	 -108.02 	 -108.02 	 -108.02 	 -108.02 	 -108.02 	 -108.02 	 -108.02 	 -108.02 	 -108.02 	 -108.02 	 -108.02 	 -108.02 	 -108.02 	 -108.02 	 -108.02 	 
+# 	 NRETRIAL 	 NREQUIL 	 CONT 	 EDS_STAT_OUT 	 PERIODIC
+ 	 50000 	 0 	 1 	 1 	 0 	 
+END
+STEP
+# 	 NSTLIM 	 T 	 DT
+ 	 50 	 0 	 0.002 	 
+END
+SYSTEM
+# 	 NPM 	 NSM
+ 	 1 	 1478 	 
+END
+WRITETRAJ
+# 	 NTWX 	 NTWSE 	 NTWV 	 NTWF 	 NTWE 	 NTWG 	 NTWB
+ 	 1000 	 0 	 0 	 0 	 1000 	 0 	 0 	 
+END

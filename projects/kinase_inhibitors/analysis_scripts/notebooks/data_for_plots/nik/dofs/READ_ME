@@ -1,0 +1,5 @@
+
+tser @pbc r cog @topo 0_input/NIK_complex_openFF.top @time 0 0.2 @prop t%1:12,13,15,16 @traj g3_prod_seed[1-5]/analysis/data/*.trc.gz > dihedral_ligand1.tsv
+
+tser @topo 0_input/NIK_complex_openFF.top @pbc r cog @time 0 0.2 @prop 'd%7:1206,2248 d%7:1206,2218' @traj g3_prod_seed[12345]/analysis/data/*1.trc.gz > distances_side_chain.tsv
+

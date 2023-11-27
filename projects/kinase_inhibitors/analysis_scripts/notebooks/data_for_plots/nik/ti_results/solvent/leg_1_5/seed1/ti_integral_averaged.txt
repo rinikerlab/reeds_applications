@@ -1,0 +1,13 @@
+This file contains the TI integral evaluated using the first n% of the data.
+dH/d(lamda) values used to compute the integral where averaged over 3 random seeds.
+Percent	dHdl	dVdl
+10.0%	149.46
+20.0%	150.76
+30.0%	151.79
+40.0%	152.08
+50.0%	152.16
+60.0%	151.8
+70.0%	152.2
+80.0%	152.07
+90.0%	152.1
+100.0%	151.97

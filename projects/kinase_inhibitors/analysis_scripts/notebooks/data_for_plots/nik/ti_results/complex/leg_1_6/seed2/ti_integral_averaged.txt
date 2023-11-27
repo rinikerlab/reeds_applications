@@ -1,0 +1,13 @@
+This file contains the TI integral evaluated using the first n% of the data.
+
+Percent	dHdl	dVdl
+10.0%	-110.2
+20.0%	-112.18
+30.0%	-110.58
+40.0%	-109.02
+50.0%	-108.2
+60.0%	-108.71
+70.0%	-107.73
+80.0%	-107.48
+90.0%	-107.88
+100.0%	-107.76
